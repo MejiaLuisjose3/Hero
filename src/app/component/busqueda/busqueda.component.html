@@ -1,0 +1,18 @@
+<h1>Heroes de <small>Marvel y DC</small></h1>
+
+<hr>
+<div class="card-columns animated fadeIn">
+
+	<div class="card" *ngFor="let valor of heroe">
+		
+		<img class="card-img-top" src="../../{{valor.img}}" alt="Card image cap">
+		<div class="card-body">
+			<h5 class="card-title">{{valor.nombre}}</h5>
+			<p class="card-text">{{ valor.bio }}</p>
+			<p class="card-text"><small class="text-muted">Aparicion: {{valor.aparicion}}</small></p>
+
+			<a [routerLink]="['/heroe',valor.id]" class="btn btn-outline-primary btn-block">Mostrar mas...</a>
+		</div>
+	</div>
+</div>
+
